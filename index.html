@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MRR Fotokopi, Print & ATK — Tulungagung</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#3A2F63;--navy-pale:#EAE5F5;
+  --terra:#D97D4A;--terra-pale:#FBE7D6;--terra-dark:#A2542A;
+  --teal:#3E8574;--teal-pale:#E3F0EA;--teal-dark:#255A4C;
+  --ink:#231C30;--gray:#6C6478;--paper:#FAF7F3;--white:#fff;--line:#E4DEEF;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+.wrap{max-width:1000px;margin:0 auto;padding:0 1.5rem}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:20;background:rgba(250,247,243,0.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--navy)}
+.brand-mark{width:34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:0.8rem}
+.brand-name{font-family:'Playfair Display',serif;font-weight:700;font-size:1rem}
+.nav-cta{display:inline-flex;align-items:center;gap:8px;background:var(--teal);color:#fff;padding:0.55rem 1.1rem;border-radius:8px;text-decoration:none;font-weight:500;font-size:0.85rem}
+
+/* HERO */
+.hero{padding:4.5rem 0 3.5rem;display:grid;grid-template-columns:1.1fr 0.9fr;gap:3rem;align-items:center}
+.hero-kicker{color:var(--terra-dark);font-weight:500;font-size:0.95rem;margin-bottom:0.75rem}
+.hero h1{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(2.1rem,4.5vw,3.1rem);line-height:1.15;color:var(--navy);margin-bottom:1.1rem}
+.hero p{color:var(--gray);font-size:1.02rem;max-width:44ch;margin-bottom:1.75rem}
+.hero-actions{display:flex;gap:0.75rem;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:0.8rem 1.5rem;border-radius:8px;text-decoration:none;font-weight:500;font-size:0.95rem;border:1.5px solid transparent}
+.btn-primary{background:var(--navy);color:#fff}
+.btn-outline{border-color:var(--navy);color:var(--navy)}
+.hero-stack{display:flex;flex-direction:column;gap:0.7rem}
+.stack-item{border-radius:12px;padding:1.4rem 1.5rem;color:#fff}
+.stack-item h3{font-family:'Playfair Display',serif;font-size:1.15rem;margin-bottom:0.2rem}
+.stack-item span{font-size:0.85rem;opacity:0.85}
+.stack-navy{background:var(--navy)}
+.stack-terra{background:var(--terra-dark)}
+.stack-teal{background:var(--teal-dark)}
+
+/* SECTION SHARED */
+section{padding:3.5rem 0;border-top:1px solid var(--line)}
+.section-head{margin-bottom:2rem;max-width:60ch}
+.section-head h2{font-family:'Playfair Display',serif;font-size:1.7rem;color:var(--navy);margin-bottom:0.5rem}
+.section-head p{color:var(--gray)}
+
+/* SERVICES */
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.svc-card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:1.5rem;border-top:4px solid var(--navy)}
+.svc-card.terra{border-top-color:var(--terra)}
+.svc-card.teal{border-top-color:var(--teal)}
+.svc-card h3{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--navy);margin-bottom:0.6rem}
+.svc-card ul{list-style:none;color:var(--gray);font-size:0.92rem}
+.svc-card li{padding:0.25rem 0}
+
+/* PRICE STRIP */
+.price-strip{background:var(--terra-pale);border-radius:12px;padding:2rem 2.25rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.25rem}
+.price-strip .num{font-family:'Playfair Display',serif;font-size:2.1rem;color:var(--terra-dark);font-weight:700}
+.price-strip .num small{font-size:1rem;font-weight:500;display:block;color:var(--terra-dark)}
+.price-strip p{max-width:40ch;color:var(--terra-dark)}
+
+/* LOCATION */
+.loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.loc-list{border-top:1px solid var(--line)}
+.loc-row{display:flex;justify-content:space-between;padding:0.9rem 0;border-bottom:1px solid var(--line);font-size:0.95rem}
+.loc-row .k{color:var(--gray)}
+.loc-row .v{color:var(--ink);font-weight:500;text-align:right}
+.map-box{background:var(--navy-pale);border-radius:12px;display:flex;align-items:center;justify-content:center;min-height:220px;color:var(--navy);font-weight:500;text-align:center;padding:1.5rem}
+.map-box a{color:var(--navy);text-decoration:underline}
+
+/* FOOTER */
+footer{padding:2.5rem 0;text-align:center;color:var(--gray);font-size:0.85rem}
+footer a{color:var(--navy);text-decoration:none;font-weight:500}
+
+@media(max-width:820px){
+  .hero{grid-template-columns:1fr;padding-top:2.5rem}
+  .services{grid-template-columns:1fr}
+  .loc-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#" class="brand">
+      <span class="brand-mark">MRR</span>
+      <span class="brand-name">MRR Fotokopi</span>
+    </a>
+    <a href="https://wa.me/6281335947012" target="_blank" class="nav-cta">Chat WhatsApp</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="hero">
+    <div>
+      <div class="hero-kicker">Buka setiap hari · Karangrejo, Tulungagung</div>
+      <h1>Fotokopi, print, dan kebutuhan ATK dalam satu tempat.</h1>
+      <p>Layanan cetak harian untuk pelajar, warga sekitar, dan keperluan administrasi — harga bersahabat, hasil rapi, dan siap dikerjakan sambil ditunggu.</p>
+      <div class="hero-actions">
+        <a href="https://wa.me/6281335947012" target="_blank" class="btn btn-primary">Pesan lewat WhatsApp</a>
+        <a href="#lokasi" class="btn btn-outline">Lihat lokasi</a>
+      </div>
+    </div>
+    <div class="hero-stack">
+      <div class="stack-item stack-navy">
+        <h3>Fotokopi</h3>
+        <span>Hitam putih & warna, A4 hingga F4</span>
+      </div>
+      <div class="stack-item stack-terra">
+        <h3>Print</h3>
+        <span>Dokumen, tugas, hingga berkas administrasi</span>
+      </div>
+      <div class="stack-item stack-teal">
+        <h3>ATK</h3>
+        <span>Alat tulis dan kebutuhan sekolah harian</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="layanan">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Layanan yang tersedia</h2>
+      <p>Dikerjakan langsung di tempat, cocok untuk kebutuhan sekolah, berkas desa, maupun keperluan pribadi.</p>
+    </div>
+    <div class="services">
+      <div class="svc-card">
+        <h3>Fotokopi & scan</h3>
+        <ul>
+          <li>Hitam putih dan warna</li>
+          <li>Ukuran A4 dan F4</li>
+          <li>Fotokopi KTP dan kartu</li>
+        </ul>
+      </div>
+      <div class="svc-card terra">
+        <h3>Print & jilid</h3>
+        <ul>
+          <li>Print dokumen dan tugas</li>
+          <li>Jilid spiral dan lakban</li>
+          <li>Laminating dan press mika</li>
+        </ul>
+      </div>
+      <div class="svc-card teal">
+        <h3>ATK harian</h3>
+        <ul>
+          <li>Pulpen, buku, dan map</li>
+          <li>Kertas HVS per lembar/rim</li>
+          <li>Perlengkapan sekolah dasar</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="price-strip">
+      <div class="num">Rp 200<small>per lembar fotokopi hitam putih</small></div>
+      <p>Harga tetap sama untuk pelanggan lama maupun baru — tidak ada minimal jumlah salinan.</p>
+    </div>
+  </div>
+</section>
+
+<section id="lokasi">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Lokasi dan jam buka</h2>
+      <p>Berada satu halaman dengan toko kebutuhan pokok keluarga, mudah dijangkau dari jalan kabupaten.</p>
+    </div>
+    <div class="loc-grid">
+      <div class="loc-list">
+        <div class="loc-row"><span class="k">Alamat</span><span class="v">Karangrejo, Tulungagung, Jawa Timur</span></div>
+        <div class="loc-row"><span class="k">Jam buka</span><span class="v">Setiap hari, 07.00 – 21.00</span></div>
+        <div class="loc-row"><span class="k">WhatsApp</span><span class="v">0813-3594-7012</span></div>
+        <div class="loc-row"><span class="k">Instagram</span><span class="v">@mrrfotokopi</span></div>
+      </div>
+      <div class="map-box">
+        Lokasi lengkap dan penunjuk arah menyusul —<br>
+        hubungi lewat <a href="https://wa.me/6281335947012" target="_blank">WhatsApp</a> untuk detail titik lokasi.
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 MRR Fotokopi, Print & ATK · Dikelola oleh Muhammad Rizky Ramadhani</p>
+    <p style="margin-top:0.4rem">Lihat profil lengkap di <a href="https://mrramadhani.github.io/portfolio/" target="_blank">portfolio</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
