@@ -3,199 +3,419 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MRR Fotokopi, Print & ATK — Tulungagung</title>
+<title>MRR Fotokopi, Print & ATK — Karangrejo, Tulungagung</title>
+<meta name="description" content="Fotokopi, print, dan ATK di Karangrejo, Tulungagung. Dekat Alfamart Sembon, jalur Kediri–Tulungagung–Trenggalek.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
 :root{
-  --navy:#3A2F63;--navy-pale:#EAE5F5;
-  --terra:#D97D4A;--terra-pale:#FBE7D6;--terra-dark:#A2542A;
-  --teal:#3E8574;--teal-pale:#E3F0EA;--teal-dark:#255A4C;
-  --ink:#231C30;--gray:#6C6478;--paper:#FAF7F3;--white:#fff;--line:#E4DEEF;
+  --navy:#3A2F63;--navy-dark:#241D42;--navy-pale:#EFEAF9;
+  --terracotta:#D97D4A;--terracotta-dark:#A2542A;--terracotta-pale:#FBE7D6;
+  --teal:#3E8574;--teal-dark:#255A4C;--teal-pale:#E3F0EA;
+  --paper:#FBF8F2;--paper-line:#E4DACB;--margin-red:#C1503D;
+  --ink:#2B2320;--ink-soft:#6B6157;--ink-faint:#A69C8C;
+  --white:#FFFFFF;
+  --radius:10px;--radius-lg:14px;
 }
+
 html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
-.wrap{max-width:1000px;margin:0 auto;padding:0 1.5rem}
-
-/* NAV */
-nav{position:sticky;top:0;z-index:20;background:rgba(250,247,243,0.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--navy)}
-.brand-mark{width:34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:0.8rem}
-.brand-name{font-family:'Playfair Display',serif;font-weight:700;font-size:1rem}
-.nav-cta{display:inline-flex;align-items:center;gap:8px;background:var(--teal);color:#fff;padding:0.55rem 1.1rem;border-radius:8px;text-decoration:none;font-weight:500;font-size:0.85rem}
-
-/* HERO */
-.hero{padding:4.5rem 0 3.5rem;display:grid;grid-template-columns:1.1fr 0.9fr;gap:3rem;align-items:center}
-.hero-kicker{color:var(--terra-dark);font-weight:500;font-size:0.95rem;margin-bottom:0.75rem}
-.hero h1{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(2.1rem,4.5vw,3.1rem);line-height:1.15;color:var(--navy);margin-bottom:1.1rem}
-.hero p{color:var(--gray);font-size:1.02rem;max-width:44ch;margin-bottom:1.75rem}
-.hero-actions{display:flex;gap:0.75rem;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:0.8rem 1.5rem;border-radius:8px;text-decoration:none;font-weight:500;font-size:0.95rem;border:1.5px solid transparent}
-.btn-primary{background:var(--navy);color:#fff}
-.btn-outline{border-color:var(--navy);color:var(--navy)}
-.hero-stack{display:flex;flex-direction:column;gap:0.7rem}
-.stack-item{border-radius:12px;padding:1.4rem 1.5rem;color:#fff}
-.stack-item h3{font-family:'Playfair Display',serif;font-size:1.15rem;margin-bottom:0.2rem}
-.stack-item span{font-size:0.85rem;opacity:0.85}
-.stack-navy{background:var(--navy)}
-.stack-terra{background:var(--terra-dark)}
-.stack-teal{background:var(--teal-dark)}
-
-/* SECTION SHARED */
-section{padding:3.5rem 0;border-top:1px solid var(--line)}
-.section-head{margin-bottom:2rem;max-width:60ch}
-.section-head h2{font-family:'Playfair Display',serif;font-size:1.7rem;color:var(--navy);margin-bottom:0.5rem}
-.section-head p{color:var(--gray)}
-
-/* SERVICES */
-.services{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
-.svc-card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:1.5rem;border-top:4px solid var(--navy)}
-.svc-card.terra{border-top-color:var(--terra)}
-.svc-card.teal{border-top-color:var(--teal)}
-.svc-card h3{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--navy);margin-bottom:0.6rem}
-.svc-card ul{list-style:none;color:var(--gray);font-size:0.92rem}
-.svc-card li{padding:0.25rem 0}
-
-/* PRICE STRIP */
-.price-strip{background:var(--terra-pale);border-radius:12px;padding:2rem 2.25rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.25rem}
-.price-strip .num{font-family:'Playfair Display',serif;font-size:2.1rem;color:var(--terra-dark);font-weight:700}
-.price-strip .num small{font-size:1rem;font-weight:500;display:block;color:var(--terra-dark)}
-.price-strip p{max-width:40ch;color:var(--terra-dark)}
-
-/* LOCATION */
-.loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
-.loc-list{border-top:1px solid var(--line)}
-.loc-row{display:flex;justify-content:space-between;padding:0.9rem 0;border-bottom:1px solid var(--line);font-size:0.95rem}
-.loc-row .k{color:var(--gray)}
-.loc-row .v{color:var(--ink);font-weight:500;text-align:right}
-.map-box{background:var(--navy-pale);border-radius:12px;display:flex;align-items:center;justify-content:center;min-height:220px;color:var(--navy);font-weight:500;text-align:center;padding:1.5rem}
-.map-box a{color:var(--navy);text-decoration:underline}
-
-/* FOOTER */
-footer{padding:2.5rem 0;text-align:center;color:var(--gray);font-size:0.85rem}
-footer a{color:var(--navy);text-decoration:none;font-weight:500}
-
-@media(max-width:820px){
-  .hero{grid-template-columns:1fr;padding-top:2.5rem}
-  .services{grid-template-columns:1fr}
-  .loc-grid{grid-template-columns:1fr}
+body{
+  font-family:'DM Sans',sans-serif;color:var(--ink);background:var(--paper);
+  line-height:1.6;
+  background-image:repeating-linear-gradient(var(--paper) 0px,var(--paper) 27px,var(--paper-line) 28px);
 }
+h1,h2,h3{font-family:'Poppins',sans-serif}
+a{color:inherit}
+.mono{font-family:'DM Mono',monospace}
+
+/* ── NAV ── */
+nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(251,248,242,0.94);backdrop-filter:blur(10px);
+  border-bottom:2px solid var(--ink);
+  padding:0 1.25rem;display:flex;align-items:center;justify-content:space-between;height:56px;
+}
+.nav-brand{display:flex;align-items:center;gap:0.6rem;text-decoration:none}
+.nav-mark{
+  width:34px;height:34px;border-radius:8px;background:var(--navy);color:var(--white);
+  display:flex;align-items:center;justify-content:center;font-family:'Poppins';font-weight:800;font-size:0.72rem;flex-shrink:0;
+}
+.nav-name{font-family:'Poppins';font-weight:700;font-size:0.92rem;color:var(--navy-dark);line-height:1.1}
+.nav-name small{display:block;font-family:'DM Sans';font-weight:500;font-size:0.65rem;color:var(--ink-soft);letter-spacing:0.02em}
+.nav-links{list-style:none;display:none;gap:1.4rem}
+.nav-links a{font-size:0.82rem;font-weight:500;text-decoration:none;color:var(--ink-soft)}
+.nav-links a:hover{color:var(--navy)}
+.nav-wa{
+  display:flex;align-items:center;gap:0.4rem;background:var(--terracotta);color:var(--white);
+  padding:0.45rem 0.9rem;border-radius:100px;text-decoration:none;font-size:0.78rem;font-weight:600;flex-shrink:0;
+}
+@media(min-width:680px){.nav-links{display:flex}}
+
+/* ── HERO ── */
+.hero{max-width:760px;margin:0 auto;padding:2.6rem 1.25rem 3rem;position:relative}
+.hero::before{
+  content:'';position:absolute;left:1.5rem;top:0;bottom:0;width:2px;background:var(--margin-red);opacity:0.35;
+}
+.hero-inner{padding-left:2.4rem}
+.status-pill{
+  display:inline-flex;align-items:center;gap:0.45rem;font-size:0.76rem;font-weight:600;
+  padding:0.35rem 0.85rem;border-radius:100px;margin-bottom:1.1rem;border:1.5px solid currentColor;
+}
+.status-pill.open{color:var(--teal-dark);background:var(--teal-pale)}
+.status-pill.closed{color:var(--ink-soft);background:var(--white);border-color:var(--paper-line)}
+.status-dot{width:7px;height:7px;border-radius:50%;background:currentColor;flex-shrink:0}
+.status-pill.open .status-dot{animation:pulse 1.8s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+
+.hero h1{font-size:clamp(1.9rem,6vw,2.7rem);font-weight:800;color:var(--navy-dark);line-height:1.15;margin-bottom:0.7rem}
+.hero-tagline{font-size:1rem;color:var(--ink-soft);max-width:36ch;margin-bottom:1.1rem}
+.hero-addr{font-size:0.85rem;color:var(--ink-soft);margin-bottom:1.6rem;display:flex;gap:0.4rem;align-items:flex-start}
+.hero-addr svg{width:15px;height:15px;flex-shrink:0;margin-top:0.15rem;stroke:var(--terracotta-dark);fill:none;stroke-width:2}
+.hero-actions{display:flex;flex-wrap:wrap;gap:0.6rem}
+.btn{
+  display:inline-flex;align-items:center;gap:0.45rem;padding:0.7rem 1.3rem;border-radius:8px;
+  font-size:0.88rem;font-weight:600;text-decoration:none;border:2px solid transparent;transition:transform 0.15s;
+}
+.btn:active{transform:scale(0.97)}
+.btn-primary{background:var(--terracotta);color:var(--white)}
+.btn-outline{background:transparent;color:var(--navy-dark);border-color:var(--navy-dark)}
+.btn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2}
+
+/* ── SECTION SHELL ── */
+section{max-width:760px;margin:0 auto;padding:2.8rem 1.25rem;border-top:2px dashed var(--paper-line)}
+.sec-title{font-size:1.4rem;font-weight:700;color:var(--navy-dark);margin-bottom:0.3rem}
+.sec-sub{font-size:0.86rem;color:var(--ink-soft);margin-bottom:1.6rem;max-width:48ch}
+
+/* ── MENU BOARD (Harga) ── */
+.menu-grid{display:grid;grid-template-columns:1fr;gap:1.1rem}
+@media(min-width:640px){.menu-grid{grid-template-columns:repeat(3,1fr)}}
+.menu-card{
+  background:var(--white);border:1.5px solid var(--ink);border-radius:var(--radius-lg);
+  padding:1.2rem 1.15rem 1.3rem;position:relative;
+}
+.menu-card::before{
+  content:'';position:absolute;top:-2px;left:14px;right:14px;height:6px;
+  background:repeating-linear-gradient(90deg,var(--paper) 0 6px,transparent 6px 12px);
+  border-top:1.5px solid var(--ink);
+}
+.menu-card h3{font-size:0.95rem;color:var(--terracotta-dark);margin-bottom:0.85rem;padding-bottom:0.6rem;border-bottom:1.5px dashed var(--paper-line)}
+.menu-row{display:flex;align-items:baseline;gap:0.4rem;font-size:0.84rem;margin-bottom:0.55rem}
+.menu-row .m-name{color:var(--ink);white-space:nowrap}
+.menu-row .m-dots{flex:1;border-bottom:1.5px dotted var(--ink-faint);transform:translateY(-3px)}
+.menu-row .m-price{font-weight:500;color:var(--navy-dark);white-space:nowrap}
+.menu-note{font-size:0.76rem;color:var(--ink-soft);font-style:italic;margin-top:0.7rem}
+
+/* ── ATK GRID ── */
+.atk-group{margin-bottom:1.6rem}
+.atk-group:last-child{margin-bottom:0}
+.atk-group-title{font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:var(--teal-dark);margin-bottom:0.7rem}
+.atk-items{display:flex;flex-wrap:wrap;gap:0.55rem}
+.atk-chip{
+  display:flex;align-items:center;gap:0.5rem;background:var(--white);
+  border:1.5px solid var(--paper-line);border-radius:8px;padding:0.5rem 0.8rem;font-size:0.8rem;
+}
+.atk-chip .a-price{font-weight:600;color:var(--terracotta-dark);white-space:nowrap}
+
+/* ── PESAN & BAYAR (QR stickers) ── */
+.qr-grid{display:grid;grid-template-columns:1fr;gap:1.3rem}
+@media(min-width:560px){.qr-grid{grid-template-columns:1fr 1fr}}
+.qr-sticker{
+  background:var(--white);border:1.5px solid var(--ink);border-radius:6px;
+  padding:1.3rem 1.1rem 1.1rem;text-align:center;position:relative;
+  box-shadow:3px 4px 0 rgba(43,35,32,0.08);
+}
+.qr-sticker:nth-child(1){transform:rotate(-1.1deg)}
+.qr-sticker:nth-child(2){transform:rotate(1deg)}
+.qr-tape{
+  position:absolute;top:-10px;left:50%;transform:translateX(-50%) rotate(-2deg);
+  width:64px;height:22px;background:rgba(217,125,74,0.35);border:1px solid rgba(217,125,74,0.5);
+}
+.qr-label{font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:var(--ink-soft);margin-bottom:0.8rem}
+.qr-box{
+  width:180px;height:180px;margin:0 auto 0.9rem;border:1.5px dashed var(--paper-line);border-radius:8px;
+  background:var(--paper);display:flex;align-items:center;justify-content:center;overflow:hidden;
+}
+.qr-box img{width:100%;height:100%;object-fit:contain}
+.qr-placeholder{display:flex;flex-direction:column;align-items:center;gap:0.4rem;color:var(--ink-faint);font-size:0.68rem;padding:0.8rem;text-align:center}
+.qr-placeholder svg{width:26px;height:26px;stroke:var(--ink-faint);fill:none;stroke-width:1.5}
+.qr-caption{font-size:0.86rem;font-weight:600;color:var(--navy-dark);margin-bottom:0.25rem}
+.qr-sub{font-size:0.76rem;color:var(--ink-soft)}
+
+/* ── LOKASI ── */
+.loc-wrap{display:grid;grid-template-columns:1fr;gap:1.6rem}
+@media(min-width:640px){.loc-wrap{grid-template-columns:1.1fr 1fr}}
+.loc-addr p{font-size:0.88rem;color:var(--ink-soft);margin-bottom:1rem}
+.loc-addr strong{color:var(--ink)}
+.hours-table{width:100%;border-collapse:collapse;font-size:0.82rem}
+.hours-table td{padding:0.4rem 0;border-bottom:1px solid var(--paper-line);color:var(--ink-soft)}
+.hours-table td:last-child{text-align:right;font-family:'DM Mono',monospace}
+.hours-table tr.today td{color:var(--navy-dark);font-weight:600}
+.hours-note{font-size:0.74rem;color:var(--ink-faint);font-style:italic;margin-top:0.6rem}
+
+/* ── FOOTER ── */
+footer{max-width:760px;margin:0 auto;padding:2rem 1.25rem 2.6rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;border-top:2px solid var(--ink)}
+footer p{font-size:0.78rem;color:var(--ink-soft)}
+.foot-links{display:flex;gap:0.6rem}
+.foot-links a{
+  width:36px;height:36px;border-radius:8px;border:1.5px solid var(--paper-line);
+  display:flex;align-items:center;justify-content:center;text-decoration:none;color:var(--ink-soft);
+}
+.foot-links a svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2}
+.foot-links a:hover{border-color:var(--navy-dark);color:var(--navy-dark)}
 </style>
 </head>
 <body>
 
 <nav>
-  <div class="wrap">
-    <a href="#" class="brand">
-      <span class="brand-mark">MRR</span>
-      <span class="brand-name">MRR Fotokopi</span>
-    </a>
-    <a href="https://wa.me/6281335947012" target="_blank" class="nav-cta">Chat WhatsApp</a>
-  </div>
+  <a href="#" class="nav-brand">
+    <div class="nav-mark">MRR</div>
+    <div class="nav-name">MRR Fotokopi<small>Print & ATK</small></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#harga">Harga</a></li>
+    <li><a href="#atk">ATK</a></li>
+    <li><a href="#pesan">Pesan & Bayar</a></li>
+    <li><a href="#lokasi">Lokasi</a></li>
+  </ul>
+  <a href="https://wa.me/6289654650612" target="_blank" class="nav-wa">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+    Chat
+  </a>
 </nav>
 
-<div class="wrap">
-  <div class="hero">
-    <div>
-      <div class="hero-kicker">Buka setiap hari · Karangrejo, Tulungagung</div>
-      <h1>Fotokopi, print, dan kebutuhan ATK dalam satu tempat.</h1>
-      <p>Layanan cetak harian untuk pelajar, warga sekitar, dan keperluan administrasi — harga bersahabat, hasil rapi, dan siap dikerjakan sambil ditunggu.</p>
-      <div class="hero-actions">
-        <a href="https://wa.me/6281335947012" target="_blank" class="btn btn-primary">Pesan lewat WhatsApp</a>
-        <a href="#lokasi" class="btn btn-outline">Lihat lokasi</a>
-      </div>
+<!-- ══ HERO ══ -->
+<header class="hero">
+  <div class="hero-inner">
+    <span class="status-pill" id="statusPill"><span class="status-dot"></span><span id="statusText">Mengecek jam buka…</span></span>
+    <h1>Fotokopi, Print &amp; ATK — praktis, dekat rumah.</h1>
+    <p class="hero-tagline">Fotokopi KTP, STNK, dokumen kuliah, print tugas, sampai kebutuhan alat tulis harian — semua di satu tempat.</p>
+    <div class="hero-addr">
+      <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <span>Jl. Raya Karangrejo No.2, Dusun Sembon — ±100 m dari Alfamart Sembon, jalur Kediri–Tulungagung–Trenggalek</span>
     </div>
-    <div class="hero-stack">
-      <div class="stack-item stack-navy">
-        <h3>Fotokopi</h3>
-        <span>Hitam putih & warna, A4 hingga F4</span>
-      </div>
-      <div class="stack-item stack-terra">
-        <h3>Print</h3>
-        <span>Dokumen, tugas, hingga berkas administrasi</span>
-      </div>
-      <div class="stack-item stack-teal">
-        <h3>ATK</h3>
-        <span>Alat tulis dan kebutuhan sekolah harian</span>
-      </div>
+    <div class="hero-actions">
+      <a href="https://wa.me/6289654650612" target="_blank" class="btn btn-primary">
+        <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        Chat WhatsApp
+      </a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Mrr+Fotokopi+Print+ATK+Karangrejo+Tulungagung" target="_blank" class="btn btn-outline">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Lihat Lokasi
+      </a>
     </div>
   </div>
-</div>
+</header>
 
-<section id="layanan">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Layanan yang tersedia</h2>
-      <p>Dikerjakan langsung di tempat, cocok untuk kebutuhan sekolah, berkas desa, maupun keperluan pribadi.</p>
+<!-- ══ HARGA ══ -->
+<section id="harga">
+  <div class="sec-title">Daftar Harga</div>
+  <div class="sec-sub">Harga fotokopi dan print, dari satuan sampai paket lembar.</div>
+
+  <div class="menu-grid">
+
+    <div class="menu-card">
+      <h3>Fotokopi Hitam Putih</h3>
+      <div class="menu-row"><span class="m-name">1 lembar</span><span class="m-dots"></span><span class="m-price mono">Rp500</span></div>
+      <div class="menu-row"><span class="m-name">2 lembar</span><span class="m-dots"></span><span class="m-price mono">Rp800</span></div>
+      <div class="menu-row"><span class="m-name">3 lembar (paket)</span><span class="m-dots"></span><span class="m-price mono">Rp1.000</span></div>
+      <div class="menu-row"><span class="m-name">4 lembar</span><span class="m-dots"></span><span class="m-price mono">Rp1.300</span></div>
+      <div class="menu-row"><span class="m-name">5 lembar</span><span class="m-dots"></span><span class="m-price mono">Rp1.600</span></div>
+      <div class="menu-row"><span class="m-name">6 lembar ke atas</span><span class="m-dots"></span><span class="m-price mono">+Rp300/lbr</span></div>
     </div>
-    <div class="services">
-      <div class="svc-card">
-        <h3>Fotokopi & scan</h3>
-        <ul>
-          <li>Hitam putih dan warna</li>
-          <li>Ukuran A4 dan F4</li>
-          <li>Fotokopi KTP dan kartu</li>
-        </ul>
-      </div>
-      <div class="svc-card terra">
-        <h3>Print & jilid</h3>
-        <ul>
-          <li>Print dokumen dan tugas</li>
-          <li>Jilid spiral dan lakban</li>
-          <li>Laminating dan press mika</li>
-        </ul>
-      </div>
-      <div class="svc-card teal">
-        <h3>ATK harian</h3>
-        <ul>
-          <li>Pulpen, buku, dan map</li>
-          <li>Kertas HVS per lembar/rim</li>
-          <li>Perlengkapan sekolah dasar</li>
-        </ul>
-      </div>
+
+    <div class="menu-card">
+      <h3>Fotokopi Bolak-Balik</h3>
+      <div class="menu-row"><span class="m-name">1 lembar</span><span class="m-dots"></span><span class="m-price mono">Rp800</span></div>
+      <div class="menu-row"><span class="m-name">2 lembar</span><span class="m-dots"></span><span class="m-price mono">Rp1.500</span></div>
+      <div class="menu-row"><span class="m-name">3 lembar (paket)</span><span class="m-dots"></span><span class="m-price mono">Rp2.000</span></div>
+      <div class="menu-row"><span class="m-name">4 lembar</span><span class="m-dots"></span><span class="m-price mono">Rp2.500</span></div>
+      <div class="menu-row"><span class="m-name">5 lembar</span><span class="m-dots"></span><span class="m-price mono">Rp3.000</span></div>
+      <div class="menu-row"><span class="m-name">6 lembar ke atas</span><span class="m-dots"></span><span class="m-price mono">+Rp600/lbr</span></div>
     </div>
+
+    <div class="menu-card">
+      <h3>Print &amp; Lainnya</h3>
+      <div class="menu-row"><span class="m-name">Print hitam putih</span><span class="m-dots"></span><span class="m-price mono">Rp1.000/lbr</span></div>
+      <div class="menu-row"><span class="m-name">Print warna</span><span class="m-dots"></span><span class="m-price mono">Rp2.000/lbr</span></div>
+      <div class="menu-row"><span class="m-name">Jilid lakban</span><span class="m-dots"></span><span class="m-price mono">Tanya di tempat</span></div>
+      <p class="menu-note">Fotokopi warna belum tersedia — mesin utama masih hitam putih.</p>
+    </div>
+
   </div>
 </section>
 
-<section>
-  <div class="wrap">
-    <div class="price-strip">
-      <div class="num">Rp 200<small>per lembar fotokopi hitam putih</small></div>
-      <p>Harga tetap sama untuk pelanggan lama maupun baru — tidak ada minimal jumlah salinan.</p>
+<!-- ══ ATK ══ -->
+<section id="atk">
+  <div class="sec-title">ATK Tersedia</div>
+  <div class="sec-sub">Alat tulis dan perlengkapan yang selalu ready di tempat.</div>
+
+  <div class="atk-group">
+    <div class="atk-group-title">Kertas & Plastik</div>
+    <div class="atk-items">
+      <div class="atk-chip"><span>Kertas A4 75gr</span><span class="a-price mono">Rp100/lbr</span></div>
+      <div class="atk-chip"><span>Kertas F4 75gr</span><span class="a-price mono">Rp150/lbr</span></div>
+      <div class="atk-chip"><span>Kertas Buffalo Folio 150gr</span><span class="a-price mono">Rp500/lbr</span></div>
+      <div class="atk-chip"><span>Plastik Fotokopi</span><span class="a-price mono">Rp200</span></div>
+      <div class="atk-chip"><span>Mika Jilid 0.8</span><span class="a-price mono">Rp500</span></div>
     </div>
+  </div>
+
+  <div class="atk-group">
+    <div class="atk-group-title">Map & Jilid</div>
+    <div class="atk-items">
+      <div class="atk-chip"><span>Map Folio Hijau/Kuning/Merah</span><span class="a-price mono">Rp1.000</span></div>
+      <div class="atk-chip"><span>Map Folio Biru</span><span class="a-price mono">Rp1.000</span></div>
+    </div>
+  </div>
+
+  <div class="atk-group">
+    <div class="atk-group-title">Alat Tulis</div>
+    <div class="atk-items">
+      <div class="atk-chip"><span>Pensil 2B Ujian Komputer</span><span class="a-price mono">Rp2.500</span></div>
+      <div class="atk-chip"><span>Pensil 2B</span><span class="a-price mono">Rp1.500</span></div>
+      <div class="atk-chip"><span>Pulpen Paretto</span><span class="a-price mono">Rp1.500</span></div>
+      <div class="atk-chip"><span>Pulpen Gel</span><span class="a-price mono">Rp3.000</span></div>
+      <div class="atk-chip"><span>Cutter</span><span class="a-price mono">Rp2.000</span></div>
+      <div class="atk-chip"><span>Penggaris 30cm</span><span class="a-price mono">Rp3.500</span></div>
+      <div class="atk-chip"><span>Penghapus</span><span class="a-price mono">Rp1.000</span></div>
+    </div>
+  </div>
+
+  <div class="atk-group">
+    <div class="atk-group-title">Buku Tulis</div>
+    <div class="atk-items">
+      <div class="atk-chip"><span>Buku Tulis Halus/Kotak</span><span class="a-price mono">Rp2.500</span></div>
+      <div class="atk-chip"><span>Buku Tulis HVS 60gr</span><span class="a-price mono">Rp3.000</span></div>
+    </div>
+  </div>
+
+  <p class="menu-note">Harga dapat berubah sewaktu-waktu mengikuti harga grosir. Stok terbatas, tanya ketersediaan lewat WhatsApp.</p>
+</section>
+
+<!-- ══ PESAN & BAYAR ══ -->
+<section id="pesan">
+  <div class="sec-title">Pesan &amp; Bayar</div>
+  <div class="sec-sub">Scan langsung dari HP — untuk tanya harga, pesan cetak dari jarak jauh, atau bayar tanpa tunai.</div>
+
+  <div class="qr-grid">
+
+    <div class="qr-sticker">
+      <div class="qr-tape"></div>
+      <div class="qr-label">Chat WhatsApp</div>
+      <div class="qr-box">
+        <!-- Ganti src di bawah dengan file QR WhatsApp kamu -->
+        <img src="assets/qr/whatsapp-qr.png" alt="QR Code WhatsApp MRR Fotokopi"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="qr-placeholder" style="display:none">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM18 14h3v7h-3zM14 18h3v3h-3"/></svg>
+          Taruh gambar QR di<br><span class="mono">assets/qr/whatsapp-qr.png</span>
+        </div>
+      </div>
+      <div class="qr-caption">Scan untuk chat langsung</div>
+      <div class="qr-sub">atau simpan nomor 0896-5465-0612</div>
+    </div>
+
+    <div class="qr-sticker">
+      <div class="qr-tape"></div>
+      <div class="qr-label">Bayar QRIS</div>
+      <div class="qr-box">
+        <!-- Ganti src di bawah dengan file QR QRIS kamu -->
+        <img src="assets/qr/qris.png" alt="QR Code QRIS MRR Fotokopi"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="qr-placeholder" style="display:none">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM18 14h3v7h-3zM14 18h3v3h-3"/></svg>
+          Taruh gambar QR di<br><span class="mono">assets/qr/qris.png</span>
+        </div>
+      </div>
+      <div class="qr-caption">Scan untuk bayar</div>
+      <div class="qr-sub">Semua e-wallet & m-banking mendukung QRIS</div>
+    </div>
+
   </div>
 </section>
 
+<!-- ══ LOKASI ══ -->
 <section id="lokasi">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Lokasi dan jam buka</h2>
-      <p>Berada satu halaman dengan toko kebutuhan pokok keluarga, mudah dijangkau dari jalan kabupaten.</p>
+  <div class="sec-title">Lokasi &amp; Jam Buka</div>
+  <div class="loc-wrap">
+    <div class="loc-addr">
+      <p><strong>MRR Fotokopi, Print &amp; ATK</strong><br>
+      Jl. Raya Karangrejo No.2, Dusun Sembon<br>
+      Kec. Karangrejo, Tulungagung, Jawa Timur</p>
+      <p>Di jalur kabupaten Kediri–Tulungagung–Trenggalek, ±100 m dari Alfamart Sembon.</p>
+      <a href="https://www.google.com/maps/search/?api=1&query=Mrr+Fotokopi+Print+ATK+Karangrejo+Tulungagung" target="_blank" class="btn btn-outline">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Buka di Google Maps
+      </a>
     </div>
-    <div class="loc-grid">
-      <div class="loc-list">
-        <div class="loc-row"><span class="k">Alamat</span><span class="v">Karangrejo, Tulungagung, Jawa Timur</span></div>
-        <div class="loc-row"><span class="k">Jam buka</span><span class="v">Setiap hari, 07.00 – 21.00</span></div>
-        <div class="loc-row"><span class="k">WhatsApp</span><span class="v">0813-3594-7012</span></div>
-        <div class="loc-row"><span class="k">Instagram</span><span class="v">@mrrfotokopi</span></div>
-      </div>
-      <div class="map-box">
-        Lokasi lengkap dan penunjuk arah menyusul —<br>
-        hubungi lewat <a href="https://wa.me/6281335947012" target="_blank">WhatsApp</a> untuk detail titik lokasi.
-      </div>
+    <div>
+      <table class="hours-table" id="hoursTable">
+        <tr data-day="1"><td>Senin</td><td>07.00–21.00</td></tr>
+        <tr data-day="2"><td>Selasa</td><td>07.00–21.00</td></tr>
+        <tr data-day="3"><td>Rabu</td><td>07.00–21.00</td></tr>
+        <tr data-day="4"><td>Kamis</td><td>07.00–21.00</td></tr>
+        <tr data-day="5"><td>Jumat</td><td>07.00–11.00, 13.00–21.00</td></tr>
+        <tr data-day="6"><td>Sabtu</td><td>07.00–21.00</td></tr>
+        <tr data-day="0"><td>Minggu</td><td>07.00–21.00</td></tr>
+      </table>
+      <p class="hours-note">Jumat tutup sementara saat sholat Jumat, 11.00–13.00.</p>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="wrap">
-    <p>© 2026 MRR Fotokopi, Print & ATK · Dikelola oleh Muhammad Rizky Ramadhani</p>
-    <p style="margin-top:0.4rem">Lihat profil lengkap di <a href="https://mrramadhani.github.io/portfolio/" target="_blank">portfolio</a></p>
+  <p>© <span id="year"></span> MRR Fotokopi, Print &amp; ATK</p>
+  <div class="foot-links">
+    <a href="https://wa.me/6289654650612" target="_blank" aria-label="WhatsApp">
+      <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+    </a>
+    <a href="https://www.google.com/maps/search/?api=1&query=Mrr+Fotokopi+Print+ATK+Karangrejo+Tulungagung" target="_blank" aria-label="Google Maps">
+      <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    </a>
   </div>
 </footer>
 
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Jadwal jam buka per hari (0=Minggu ... 6=Sabtu). Ganti di sini kalau jam berubah.
+const schedule = {
+  0:[['07:00','21:00']],
+  1:[['07:00','21:00']],
+  2:[['07:00','21:00']],
+  3:[['07:00','21:00']],
+  4:[['07:00','21:00']],
+  5:[['07:00','11:00'],['13:00','21:00']], // Jumat: tutup saat sholat Jumat
+  6:[['07:00','21:00']]
+};
+
+function toMinutes(hhmm){ const [h,m] = hhmm.split(':').map(Number); return h*60+m; }
+
+function checkOpenStatus(){
+  const now = new Date();
+  const day = now.getDay();
+  const nowMin = now.getHours()*60 + now.getMinutes();
+  const ranges = schedule[day] || [];
+  const isOpen = ranges.some(([start,end]) => nowMin >= toMinutes(start) && nowMin < toMinutes(end));
+
+  const pill = document.getElementById('statusPill');
+  const text = document.getElementById('statusText');
+  if(isOpen){
+    pill.className = 'status-pill open';
+    text.textContent = 'Buka sekarang';
+  } else {
+    pill.className = 'status-pill closed';
+    text.textContent = 'Tutup — cek jam buka di bawah';
+  }
+
+  document.querySelectorAll('#hoursTable tr').forEach(tr => {
+    tr.classList.toggle('today', Number(tr.dataset.day) === day);
+  });
+}
+checkOpenStatus();
+</script>
 </body>
 </html>
